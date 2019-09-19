@@ -1,0 +1,48 @@
+footer {
+  background-color: #252c2e;
+  font-size: 14px;
+  color: #fff;
+  padding: 15px 0;
+  a {
+    color: $color-blue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .fab {
+      display: inline-block;
+      color: #000;
+      background-color: $color-blue;
+      border-radius: 50%;
+      padding: 5px;
+      font-size: 15px;
+      margin-left: 5px;
+      transition: .2s ease-out;
+      &:hover {
+        box-shadow: 0 0 10px 1px $color-blue;
+        color: #fff;
+        transition: .2s ease-out;
+      }
+    }
+    .fa-facebook-f {
+      padding: 5px 8px;
+    }
+    .footer_links {
+      a {
+        color: #fff;
+        padding: 0 5px;
+        text-decoration: none;
+        border-right: 1px solid #fff;
+        transition: .4s ease-out;
+        &:hover {
+          color: $color-blue;
+          transition: .4s ease-out;
+        }
+      }
+    }
+  }
+}
