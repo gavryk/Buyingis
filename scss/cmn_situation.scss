@@ -6,6 +6,9 @@
     color: #fff;
     font-size: 16px;
     line-height: 22px;
+    &:last-child {
+      margin-top: 10px;
+    }
   }
   .situations {
     display: flex;
@@ -22,10 +25,11 @@
         border-right: none;
       }
       p {
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 18px;
       }
-      i {
+      i, img {
+        width: 50%;
         border-radius: 5px;
         border: 3px solid $color-green;
         padding: 20px;

@@ -337,7 +337,8 @@ header:after {
         margin-top: 15px;
         font-size: 18px;
         color: #00adee; }
-      #how-to_sell .tool_wrapper .tools .tool i {
+      #how-to_sell .tool_wrapper .tools .tool i, #how-to_sell .tool_wrapper .tools .tool img {
+        width: 75px;
         border-radius: 5px;
         border: 3px solid #81c241;
         padding: 20px;
@@ -354,6 +355,8 @@ header:after {
     color: #fff;
     font-size: 16px;
     line-height: 22px; }
+    #common_situation p:last-child {
+      margin-top: 10px; }
   #common_situation .situations {
     display: flex;
     justify-content: space-between;
@@ -368,9 +371,10 @@ header:after {
       #common_situation .situations .tool:last-child {
         border-right: none; }
       #common_situation .situations .tool p {
-        margin-top: 15px;
+        margin-top: 10px;
         font-size: 18px; }
-      #common_situation .situations .tool i {
+      #common_situation .situations .tool i, #common_situation .situations .tool img {
+        width: 50%;
         border-radius: 5px;
         border: 3px solid #81c241;
         padding: 20px;
