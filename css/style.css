@@ -88,16 +88,33 @@ header .top_header {
     header .top_header .container .logo {
       margin-top: 40px;
       background-color: #fff;
-      padding: 15px;
+      padding: 15px 0;
       border-bottom-left-radius: 50px;
       border-bottom-right-radius: 50px;
       position: relative; }
+      header .top_header .container .logo a {
+        position: relative;
+        z-index: 10; }
       header .top_header .container .logo:after {
         content: '';
+        background-color: #fff;
         position: absolute;
-        top: 0;
-        left: 0;
-        clip-path: polygon(0 100%, 50% 0, 100% 100%); }
+        width: 75px;
+        height: 70px;
+        top: 20px;
+        right: -67px;
+        z-index: 1;
+        clip-path: polygon(100% 0, 80% 12%, 58% 31%, 37% 53%, 23% 72%, 5% 100%, 0 100%, 0% 43%, 0 0); }
+      header .top_header .container .logo:before {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 75px;
+        height: 70px;
+        top: 20px;
+        left: -66px;
+        z-index: 1;
+        clip-path: polygon(100% 0, 100% 51%, 100% 105%, 94% 100%, 75% 68%, 57% 44%, 39% 25%, 21% 11%, 0 0); }
     header .top_header .container .phone {
       display: flex;
       flex-direction: row;
@@ -151,7 +168,7 @@ header:after {
 #banner {
   background-color: #000; }
   #banner .container {
-    padding: 40px 0 20px 0;
+    padding: 70px 0 20px 0;
     display: flex;
     justify-content: space-between; }
     #banner .container .video_wrapper {

@@ -1,15 +1,13 @@
 #banner {
   background-color: #000;
   .container {
-    padding: 40px 0 20px 0;
+    padding: 70px 0 20px 0;
     display: flex;
     justify-content: space-between;
-    //align-items: center;
     .video_wrapper {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      //align-items: center;
       .video_player {
         height: 70%;
         img {

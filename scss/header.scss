@@ -1,11 +1,4 @@
 header {
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    clip-path: polygon(0 100%, 50% 0, 100% 100%);
-  }
   .top_header {
     position: relative;
     //padding-bottom: 20px;
@@ -20,6 +13,32 @@ header {
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
         position: relative;
+        a {
+          position: relative;
+          z-index: 10;
+        }
+        &:after {
+          content: '';
+          background-color: #fff;
+          position: absolute;
+          width: 75px;
+          height: 70px;
+          top: 20px;
+          right: -67px;
+          z-index: 1;
+          clip-path: polygon(100% 0, 80% 12%, 58% 31%, 37% 53%, 23% 72%, 5% 100%, 0 100%, 0% 43%, 0 0);
+        }
+        &:before {
+          content: '';
+          background-color: #fff;
+          position: absolute;
+          width: 75px;
+          height: 70px;
+          top: 20px;
+          left: -66px;
+          z-index: 1;
+        clip-path: polygon(100% 0, 100% 51%, 100% 105%, 94% 100%, 75% 68%, 57% 44%, 39% 25%, 21% 11%, 0 0);
+        }
       }
       .phone {
         display: flex;
