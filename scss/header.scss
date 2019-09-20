@@ -18,25 +18,25 @@ header {
         }
         &:after {
           content: '';
-          background-color: #fff;
           position: absolute;
-          width: 75px;
-          height: 70px;
-          top: 20px;
-          right: -67px;
+          background: url(../img/corner2.png);
+          width: 136px;
+          height: 75px;
+          top: 14px;
+          right: -111px;
           z-index: 1;
-          clip-path: polygon(100% 0, 83% 11%, 57% 33%, 38% 53%, 23% 73%, 5% 100%, 0 100%, 0% 43%, 0 0);
+          //clip-path: polygon(100% 0, 83% 11%, 57% 33%, 38% 53%, 23% 73%, 5% 100%, 0 100%, 0% 43%, 0 0);
         }
         &:before {
           content: '';
-          background-color: #fff;
+          background: url(../img/corner.png);
           position: absolute;
-          width: 105px;
-          height: 101px;
-          top: 20px;
-          left: -103px;
+          width: 170px;
+          height: 109px;
+          top: 9px;
+          left: -160px;
           z-index: 1;
-          clip-path:polygon(100% 100%, 100% 97%, 93% 95%, 85% 88%, 78% 78%, 70% 65%, 63% 55%, 53% 42%, 41% 30%, 29% 20%, 20% 13%, 1% 0%, 100% 0%, 100% 54%);
+          //clip-path:polygon(100% 100%, 100% 97%, 93% 95%, 85% 88%, 78% 78%, 70% 65%, 63% 55%, 53% 42%, 41% 30%, 29% 20%, 20% 13%, 1% 0%, 100% 0%, 100% 54%);
         }
       }
       .phone {

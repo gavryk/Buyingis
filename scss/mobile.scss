@@ -213,12 +213,12 @@
           width: 225px;
           &:before {
             height: 89px;
-            top: 0;
+            top: -1px;
           }
           &:after {
             height: 54px;
-            width: 80px;
-            right: -60px;
+            width: 100px;
+            right: -52px;
           }
         }
       }
