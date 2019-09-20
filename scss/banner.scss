@@ -57,12 +57,11 @@
           position: absolute;
           top: 50px;
           left: 40%;
-          background-color: $color-blue;
-          width: 60px;
-          height: 35px;
-          clip-path: polygon(0 100%, 50% 0, 100% 100%);
-          transform: rotate(180deg);
-          border-top: 1px solid #0292c8;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 35px 30px 0 30px;
+          border-color: $color-blue transparent transparent transparent;
         }
         h2 {
           color: #fff;
