@@ -1,8 +1,8 @@
 header {
   .top_header {
     position: relative;
-    //padding-bottom: 20px;
     height: 60px;
+    z-index: 2;
     .container {
       display: flex;
       justify-content: space-between;
@@ -25,18 +25,18 @@ header {
           top: 20px;
           right: -67px;
           z-index: 1;
-          clip-path: polygon(100% 0, 80% 12%, 58% 31%, 37% 53%, 23% 72%, 5% 100%, 0 100%, 0% 43%, 0 0);
+          clip-path: polygon(100% 0, 83% 11%, 57% 33%, 38% 53%, 23% 73%, 5% 100%, 0 100%, 0% 43%, 0 0);
         }
         &:before {
           content: '';
           background-color: #fff;
           position: absolute;
           width: 105px;
-          height: 99px;
+          height: 101px;
           top: 20px;
           left: -103px;
           z-index: 1;
-          clip-path: polygon(100% 99%, 96% 99%, 92% 97%, 82% 87%, 76% 78%, 70% 66%, 63% 54%, 54% 42%, 43% 30%, 30% 20%, 19% 12%, 0% 0%, 100% 0%, 100% 54%);
+          clip-path:polygon(100% 100%, 100% 97%, 93% 95%, 85% 88%, 78% 78%, 70% 65%, 63% 55%, 53% 42%, 41% 30%, 29% 20%, 20% 13%, 1% 0%, 100% 0%, 100% 54%);
         }
       }
       .phone {
@@ -64,15 +64,22 @@ header {
   }
   .bottom_header {
     background-color: $color-blue;
+    overflow: hidden;
     .nav_menu {
       display: flex;
       justify-content: flex-end;
       padding-right: 25px;
+      position: relative;
+      z-index: 2;
       li {
         list-style: none;
         border-right: 1px solid #03a1dc;
         cursor: pointer;
         transition: .2s ease-out;
+        padding: 25px 30px;
+        &:hover {
+          box-shadow: inset;
+        }
         &:last-child {
           border-right: none;
         }
@@ -80,7 +87,6 @@ header {
           display: inline-block;
           text-decoration: none;
           color: #fff;
-          padding: 25px 30px;
           text-transform: uppercase;
           font-size: 16px;
           font-weight: bold;
@@ -100,5 +106,8 @@ header {
     top: 0;
     left: 0;
     background-color: $color-green;
+  }
+  .burger {
+    display: none;
   }
 }

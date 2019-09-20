@@ -1,0 +1,248 @@
+@media (max-width: 992px) {
+  header {
+    .bottom_header {
+      .nav_menu {
+        li {
+          padding: 20px;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #banner {
+    .container {
+      .video_wrapper {
+        width: 100%;
+      }
+    }
+  }
+  #common_situation {
+    .container {
+      .situations {
+        padding: 30px 0 35px 0;
+      }
+    }
+  }
+  header {
+    .top_header {
+      .container {
+        .phone {
+          padding-top: 10px;
+        }
+      }
+    }
+    .bottom_header {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+      height: 1%;
+      padding-top: 50px;
+      transition: .4s ease-out;
+      .nav_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        padding: 0;
+        transition: .4s ease-out;
+        opacity: 0;
+        li {
+          width: 100%;
+          text-align: center;
+          border-right: none;
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .menu_active {
+      height: 70%;
+      padding-top: 100px;
+      transition: .4s ease-out;
+      .nav_menu {
+        transform: translateY(0%);
+        transition: .4s ease-out;
+        opacity: 1;
+      }
+    }
+    .burger {
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      cursor: pointer;
+      outline: none;
+      z-index: 3;
+      span {
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        display: block;
+        left: 0;
+        bottom: 5px;
+        transform-origin: right;
+        top: 12px;
+        position: absolute;
+        transform: translateY(5px);
+        &:after,
+        &:before {
+          content: '';
+          display: block;
+          background-color: #fff;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+        }
+        &:after {
+          top: -5px;
+          transform-origin: right;
+        }
+        &:before {
+          bottom: -5px;
+        }
+      }
+    }
+  }
+  #banner {
+    padding-top: 10%;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .form_wrapper {
+        width: 70%;
+        margin-top: 20px;
+        .form_title {
+          &:after {
+            left: 44%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #banner {
+    .video_wrapper {
+      width: 90%;
+    }
+  }
+  #how-to_sell, #common_situation {
+    .container {
+      .tool_wrapper {
+        .tools {
+          .tool {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            width: 50%;
+            border: none;
+          }
+        }
+      }
+      .situations {
+        flex-wrap: wrap;
+        .tool {
+          margin-top: 15px;
+          height: 100%;
+          width: 50%;
+          border: none;
+        }
+      }
+    }
+  }
+  footer {
+    .container {
+      flex-direction: column;
+      line-height: 35px;
+    }
+  }
+}
+
+@media (max-width: 586px) {
+  #work-process {
+    .container {
+      .steps {
+        flex-wrap: wrap;
+        .step {
+          width: 48%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  header {
+    .top_header {
+      height: 30px;
+      .container {
+        .logo {
+          margin-top: 5px;
+        }
+        .phone {
+          display: none;
+        }
+      }
+    }
+    .burger {
+      top: 35px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  header {
+    .top_header {
+      .container {
+        .logo {
+          a {
+            img {
+              width: 100%;
+            }
+          }
+          width: 225px;
+          &:before {
+            height: 89px;
+            top: 0;
+          }
+          &:after {
+            height: 54px;
+            width: 80px;
+            right: -60px;
+          }
+        }
+      }
+    }
+  }
+  #work-process {
+    .container {
+      .steps {
+        .step {
+          width: 90%;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+  #banner {
+    .container {
+      .form_wrapper {
+        .form_title {
+          &:after {
+            left: 40%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -13,9 +13,12 @@
   .situations {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 30px 0 25px 0;
     .tool {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 25%;
       text-align: center;
       border-right: 1px solid #fff;
@@ -28,15 +31,18 @@
         margin-top: 10px;
         font-size: 18px;
       }
-      i, img {
-        width: 50%;
+      .tool_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 75px;
         border-radius: 5px;
         border: 3px solid $color-green;
         padding: 20px;
         font-size: 30px;
-        color: #fff;
+        color: $color-blue;
         text-align: center;
-        display: inline-block;
       }
     }
   }

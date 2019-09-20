@@ -81,7 +81,8 @@
 /* '' */
 header .top_header {
   position: relative;
-  height: 60px; }
+  height: 60px;
+  z-index: 2; }
   header .top_header .container {
     display: flex;
     justify-content: space-between; }
@@ -103,17 +104,17 @@ header .top_header {
         top: 20px;
         right: -67px;
         z-index: 1;
-        clip-path: polygon(100% 0, 80% 12%, 58% 31%, 37% 53%, 23% 72%, 5% 100%, 0 100%, 0% 43%, 0 0); }
+        clip-path: polygon(100% 0, 83% 11%, 57% 33%, 38% 53%, 23% 73%, 5% 100%, 0 100%, 0% 43%, 0 0); }
       header .top_header .container .logo:before {
         content: '';
         background-color: #fff;
         position: absolute;
         width: 105px;
-        height: 99px;
+        height: 101px;
         top: 20px;
         left: -103px;
         z-index: 1;
-        clip-path: polygon(100% 99%, 96% 99%, 92% 97%, 82% 87%, 76% 78%, 70% 66%, 63% 54%, 54% 42%, 43% 30%, 30% 20%, 19% 12%, 0% 0%, 100% 0%, 100% 54%); }
+        clip-path: polygon(100% 100%, 100% 97%, 93% 95%, 85% 88%, 78% 78%, 70% 65%, 63% 55%, 53% 42%, 41% 30%, 29% 20%, 20% 13%, 1% 0%, 100% 0%, 100% 54%); }
     header .top_header .container .phone {
       display: flex;
       flex-direction: row;
@@ -132,23 +133,28 @@ header .top_header {
     text-decoration: none;
     font-size: 24px; }
 header .bottom_header {
-  background-color: #00adee; }
+  background-color: #00adee;
+  overflow: hidden; }
   header .bottom_header .nav_menu {
     display: flex;
     justify-content: flex-end;
-    padding-right: 25px; }
+    padding-right: 25px;
+    position: relative;
+    z-index: 2; }
     header .bottom_header .nav_menu li {
       list-style: none;
       border-right: 1px solid #03a1dc;
       cursor: pointer;
-      transition: .2s ease-out; }
+      transition: .2s ease-out;
+      padding: 25px 30px; }
+      header .bottom_header .nav_menu li:hover {
+        box-shadow: inset; }
       header .bottom_header .nav_menu li:last-child {
         border-right: none; }
       header .bottom_header .nav_menu li a {
         display: inline-block;
         text-decoration: none;
         color: #fff;
-        padding: 25px 30px;
         text-transform: uppercase;
         font-size: 16px;
         font-weight: bold; }
@@ -163,6 +169,8 @@ header:after {
   top: 0;
   left: 0;
   background-color: #81c241; }
+header .burger {
+  display: none; }
 
 #banner {
   background-color: #000; }
@@ -173,7 +181,8 @@ header:after {
     #banner .container .video_wrapper {
       display: flex;
       flex-direction: column;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 65%; }
       #banner .container .video_wrapper .video_player {
         height: 70%; }
         #banner .container .video_wrapper .video_player img {
@@ -187,13 +196,18 @@ header:after {
         text-align: center;
         padding: 10px 0; }
         #banner .container .video_wrapper .play_list h3 {
+          font-family: Arial, sans-serif;
+          font-weight: 400;
           color: #fff;
           font-size: 18px;
           margin-bottom: 10px; }
         #banner .container .video_wrapper .play_list .video_intro {
           display: flex;
           justify-content: space-evenly;
-          align-items: center; }
+          align-items: center;
+          overflow: hidden; }
+          #banner .container .video_wrapper .play_list .video_intro img {
+            max-width: 33%; }
     #banner .container .form_wrapper {
       padding-bottom: 15px;
       text-align: center;
@@ -268,6 +282,7 @@ header:after {
     display: flex;
     flex-direction: column; }
     #work-process .container h6 {
+      font-weight: 400;
       font-size: 16px;
       color: #7d7d7d; }
       #work-process .container h6 span {
@@ -326,8 +341,12 @@ header:after {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 30px 0 20px 0; }
     #how-to_sell .tool_wrapper .tools .tool {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 25%;
       text-align: center;
       border-right: 1px solid #81c241; }
@@ -337,15 +356,18 @@ header:after {
         margin-top: 15px;
         font-size: 18px;
         color: #00adee; }
-      #how-to_sell .tool_wrapper .tools .tool i, #how-to_sell .tool_wrapper .tools .tool img {
+      #how-to_sell .tool_wrapper .tools .tool .tool_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
         width: 75px;
         border-radius: 5px;
         border: 3px solid #81c241;
         padding: 20px;
         font-size: 25px;
         color: #00adee;
-        text-align: center;
-        display: inline-block; }
+        text-align: center; }
 
 #common_situation {
   background-color: #00adee;
@@ -360,9 +382,12 @@ header:after {
   #common_situation .situations {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 30px 0 25px 0; }
     #common_situation .situations .tool {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 25%;
       text-align: center;
       border-right: 1px solid #fff;
@@ -373,15 +398,18 @@ header:after {
       #common_situation .situations .tool p {
         margin-top: 10px;
         font-size: 18px; }
-      #common_situation .situations .tool i, #common_situation .situations .tool img {
-        width: 50%;
+      #common_situation .situations .tool .tool_icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 75px;
         border-radius: 5px;
         border: 3px solid #81c241;
         padding: 20px;
         font-size: 30px;
-        color: #fff;
-        text-align: center;
-        display: inline-block; }
+        color: #00adee;
+        text-align: center; }
 
 footer {
   background-color: #252c2e;
@@ -421,6 +449,152 @@ footer {
         color: #00adee;
         transition: .4s ease-out; }
 
+@media (max-width: 992px) {
+  header .bottom_header .nav_menu li {
+    padding: 20px; }
+    header .bottom_header .nav_menu li a {
+      font-size: 12px; } }
+@media (max-width: 768px) {
+  #banner .container .video_wrapper {
+    width: 100%; }
+
+  #common_situation .container .situations {
+    padding: 30px 0 35px 0; }
+
+  header .top_header .container .phone {
+    padding-top: 10px; }
+  header .bottom_header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    height: 1%;
+    padding-top: 50px;
+    transition: .4s ease-out; }
+    header .bottom_header .nav_menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      padding: 0;
+      transition: .4s ease-out;
+      opacity: 0; }
+      header .bottom_header .nav_menu li {
+        width: 100%;
+        text-align: center;
+        border-right: none; }
+        header .bottom_header .nav_menu li a {
+          font-size: 18px; }
+  header .menu_active {
+    height: 70%;
+    padding-top: 100px;
+    transition: .4s ease-out; }
+    header .menu_active .nav_menu {
+      transform: translateY(0%);
+      transition: .4s ease-out;
+      opacity: 1; }
+  header .burger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    cursor: pointer;
+    outline: none;
+    z-index: 3; }
+    header .burger span {
+      background-color: #fff;
+      width: 100%;
+      height: 2px;
+      display: block;
+      left: 0;
+      bottom: 5px;
+      transform-origin: right;
+      top: 12px;
+      position: absolute;
+      transform: translateY(5px); }
+      header .burger span:after, header .burger span:before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        height: 2px;
+        position: absolute; }
+      header .burger span:after {
+        top: -5px;
+        transform-origin: right; }
+      header .burger span:before {
+        bottom: -5px; }
+
+  #banner {
+    padding-top: 10%; }
+    #banner .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      #banner .container .form_wrapper {
+        width: 70%;
+        margin-top: 20px; }
+        #banner .container .form_wrapper .form_title:after {
+          left: 44%; } }
+@media (max-width: 640px) {
+  #banner .video_wrapper {
+    width: 90%; }
+
+  #how-to_sell .container .tool_wrapper .tools .tool, #common_situation .container .tool_wrapper .tools .tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    width: 50%;
+    border: none; }
+  #how-to_sell .container .situations, #common_situation .container .situations {
+    flex-wrap: wrap; }
+    #how-to_sell .container .situations .tool, #common_situation .container .situations .tool {
+      margin-top: 15px;
+      height: 100%;
+      width: 50%;
+      border: none; }
+
+  footer .container {
+    flex-direction: column;
+    line-height: 35px; } }
+@media (max-width: 586px) {
+  #work-process .container .steps {
+    flex-wrap: wrap; }
+    #work-process .container .steps .step {
+      width: 48%;
+      margin-top: 10px; }
+
+  header .top_header {
+    height: 30px; }
+    header .top_header .container .logo {
+      margin-top: 5px; }
+    header .top_header .container .phone {
+      display: none; }
+  header .burger {
+    top: 35px; } }
+@media (max-width: 480px) {
+  header .top_header .container .logo {
+    width: 225px; }
+    header .top_header .container .logo a img {
+      width: 100%; }
+    header .top_header .container .logo:before {
+      height: 89px;
+      top: 0; }
+    header .top_header .container .logo:after {
+      height: 54px;
+      width: 80px;
+      right: -60px; }
+
+  #work-process .container .steps .step {
+    width: 90%;
+    margin: 10px auto; }
+
+  #banner .container .form_wrapper .form_title:after {
+    left: 40%; } }
 * {
   margin: 0;
   padding: 0;
