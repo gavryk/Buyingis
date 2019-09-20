@@ -245,7 +245,6 @@ header .burger {
     #banner .container form {
       margin-top: 15px; }
       #banner .container form input {
-        outline: none;
         width: 90%;
         border: none;
         padding: 15px;
@@ -598,7 +597,8 @@ footer {
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 .blue {
   color: #00adee; }
